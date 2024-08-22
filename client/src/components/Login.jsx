@@ -40,8 +40,10 @@ const Login = () => {
   
     
     if (username === "admin" && email === "admin@email.com" && password === "Admin@123") {
-      navigate('/admin');
-      return;
+      toast.success('Login successful');
+      setTimeout(() => {
+        navigate('/admin');
+      }, 1000);
     }
   
    
@@ -51,7 +53,11 @@ const Login = () => {
       if (response.status === 200) {
         localStorage.setItem('userEmail', email);
         toast.success('Login successful');
-        navigate('/details');
+        setTimeout(() => {
+          navigate('/details');
+        }, 3000);
+        
+        
       }
     } catch (e) {
       toast.error('Login failed');

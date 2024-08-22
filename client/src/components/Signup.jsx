@@ -50,8 +50,10 @@ const Signup = () => {
         toast.error('Email Already Registered');
       } else if (response.status === 200) {
         localStorage.setItem('userEmail', email);
-        toast.success('Signup successful');
-        navigate('/details');
+        toast.success('Login successful');
+        setTimeout(() => {
+          navigate('/details');
+        }, 3000);
       } else {
         toast.error('Unexpected error occurred');
       }

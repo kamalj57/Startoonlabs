@@ -1,4 +1,6 @@
 import {useNavigate}from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Header = () => {
   const navigate=useNavigate();
   return (
@@ -53,7 +55,10 @@ const Header = () => {
               className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
               onClick={() => {
         localStorage.clear(); 
-        navigate('/login');   
+        toast.success('Logout successful');
+        setTimeout(() => {
+          navigate('/login');
+        }, 3000);
       }}
             >
               Logout
@@ -79,6 +84,7 @@ const Header = () => {
     </div>
   </div>
 </header>
+<ToastContainer />
     </div>
   )
 }
