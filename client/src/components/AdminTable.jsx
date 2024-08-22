@@ -31,7 +31,7 @@ const AdminTable = () => {
   <Chart/>
 </div>
 
-      <div className="w-1/2 mt-5 flex items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 overflow-x-auto rounded-lg border border-gray-200">
+      <div className="mt-5 flex items-center mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 overflow-x-auto rounded-lg border border-gray-200">
         <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
           <thead className="ltr:text-left rtl:text-right">
             <tr>

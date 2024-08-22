@@ -45,7 +45,7 @@ const Login = () => {
         navigate('/admin');
       }, 1000);
     }
-  
+    else{
    
     try {
       const response = await axios.post(`${baseUrl}/api/v1/login`, { username, email, password });
@@ -62,6 +62,7 @@ const Login = () => {
     } catch (e) {
       toast.error('Login failed');
     }
+  }
   };
   
 
